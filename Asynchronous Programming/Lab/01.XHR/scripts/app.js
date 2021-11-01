@@ -15,3 +15,5 @@ buttonElement.addEventListener("click", function loadRepos() {
 
   httpRequest.send();
 });
+// Your task is to write a JS function that loads a github repository asynchronously with AJAX. You should
+// create an instance of XmlHttpRequest and attach an onreadystatechange event to it.
