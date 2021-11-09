@@ -1,7 +1,12 @@
-body {
-  background-color: aquamarine;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-#logo-img {
-  width: 100px;
-  height: 100px;
+.register-form {
+  margin: auto;
+  width: 60%;
+}
+.hidden {
+  display: none;
 }

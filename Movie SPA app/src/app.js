@@ -1,5 +1,7 @@
-import login from "./login.js";
-login();
-
-let rootElement = document.querySelector(".root");
-console.log(rootElement);
+navElement.addEventListener("click", (e) => {
+  e.preventDefault();
+  if (e.target.tagName == "A") {
+    let dataLink = e.target.getAttribute("data-link");
+    let currentView = pages[dataLink];
+  }
+});
