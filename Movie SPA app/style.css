@@ -9,5 +9,14 @@
 }
 .login-section {
   margin: auto;
-  max-width: 60%;
+  max-width: 50%;
+}
+.movie-list {
+  max-width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.card {
+  margin: 15px;
 }
