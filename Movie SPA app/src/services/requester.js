@@ -3,7 +3,8 @@ function request(method, url, data) {
 
   if (method != "GET") {
     options = {
-      header: {
+      method,
+      headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(data),
