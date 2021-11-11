@@ -5,8 +5,9 @@
 }
 .register-form {
   margin: auto;
-  width: 60%;
+  max-width: 60%;
 }
-.hidden {
-  display: none;
+.login-section {
+  margin: auto;
+  max-width: 60%;
 }
