@@ -1,4 +1,5 @@
-import { html, render } from "../../node_modules/lit-html/lit-html.js";
+import { html } from "../../node_modules/lit-html/lit-html.js";
+
 let loginTemplate = () =>
   html` <section class="login-section">
     <h2>Login</h2>
@@ -32,6 +33,6 @@ let loginTemplate = () =>
       </div>
     </div>
   </section>`;
-export function loginPage() {
-  render(loginTemplate(), document.querySelector(".root"));
+export function loginPage(ctx) {
+  ctx.render(loginTemplate());
 }
