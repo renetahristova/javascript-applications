@@ -1,10 +1,16 @@
 import { render } from "../../node_modules/lit-html/lit-html.js";
 
-let rootElement = document.querySelector(".root");
+import { renderNavigation } from "../views/navigationView.js";
 
-const contextRender = (templateResult) => render(templateResult, rootElement);
+let rootElement = document.querySelector(".root");
+let navigationElement = document.querySelector(".navigation");
+
+const contextRender = (templateResult) => {
+  render(templateResult, rootElement);
+};
 
 export function renderMiddleware(ctx, next) {
+  render(renderNavigation(), navigationElement);
   ctx.render = contextRender;
   next();
 }
