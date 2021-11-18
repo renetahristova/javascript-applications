@@ -1,7 +1,6 @@
 import { html } from "../../node_modules/lit-html/lit-html.js";
-import * as authService from "../services/authService.js";
 
-let userInfo = (email) => html` <span>Welcome, ${email}</span> `;
+let userInfo = (email) => html`<div><p>Welcome, ${email}</p></div> `;
 let guestButtons = () => html`
                   <li class="nav-item">
                     <a class="nav-link" href="/register">Register</a>
@@ -16,7 +15,7 @@ let privateButtons = () => html`
                     <a class="nav-link" href="/my-movies">My movies</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="/logout">Logout</a>
+                    <a class="nav-link" href="/movies/add">Add movie</a>
                   </li>
                 </ul>
 `;
@@ -37,8 +36,8 @@ const navigationTemplate = (isAuthenticated, email) => html`
                   </li>
                   ${isAuthenticated ? privateButtons() : guestButtons()}
 
+                </div>
                 ${isAuthenticated && userInfo(email)}
-              </div>
             </div>
           </nav>
           </li>
@@ -48,4 +47,5 @@ const navigationTemplate = (isAuthenticated, email) => html`
 export function renderNavigation(ctx) {
   console.log(ctx);
   return navigationTemplate(ctx.isAuthenticated, ctx.email);
+  //ctx.isAuthenticated, ctx.email
 }

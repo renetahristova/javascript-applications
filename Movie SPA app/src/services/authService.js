@@ -8,7 +8,7 @@ function saveData({ accessToken, email, _id }) {
 }
 
 export function getData() {
-  let _id = localStorage.getItem("id");
+  let _id = localStorage.getItem("_id");
   let email = localStorage.getItem("email");
   let token = localStorage.getItem("accessToken");
 

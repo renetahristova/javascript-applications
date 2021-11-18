@@ -10,7 +10,7 @@ const contextRender = (templateResult) => {
 };
 
 export function renderMiddleware(ctx, next) {
-  render(renderNavigation(), navigationElement);
+  render(renderNavigation(ctx), navigationElement);
   ctx.render = contextRender;
   next();
 }

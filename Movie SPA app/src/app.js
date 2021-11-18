@@ -7,6 +7,7 @@ import { homePage } from "./views/homeView.js";
 import { loginPage } from "./views/loginView.js";
 import { movieDetailsPage } from "./views/movieDetailsView.js";
 import { moviePage } from "./views/movieView.js";
+import { addMoviePage } from "./views/addMovieView.js";
 
 page(authMiddleware);
 page(renderMiddleware);
@@ -14,6 +15,7 @@ page(renderMiddleware);
 page("/", homePage);
 page("/movies", moviePage);
 page("/login", loginPage);
+page("/movies/add", addMoviePage);
 page("/movies/:movieId", movieDetailsPage);
 
 page.start();
